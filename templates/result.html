@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Listener Segment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Your Results Are In</h1>
+            <p>Based on your habits, we've identified your unique listener profile.</p>
+        </header>
+        
+        <main>
+            <div class="glass-panel text-center">
+                <h2>You are a:</h2>
+                <h3 class="segment-title">{{ segment }}</h3>
+                
+                <div class="explanation-box" style="text-align: left;">
+                    <p>{{ explanation|safe }}</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-label">Hours/Week</span>
+                        <span class="stat-value">{{ inputs.hours }}</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Songs/Day</span>
+                        <span class="stat-value">{{ inputs.songs }}</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Skip Rate</span>
+                        <span class="stat-value">{{ "%.0f"|format(inputs.skip_rate * 100) }}%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Playlists</span>
+                        <span class="stat-value">{{ inputs.playlists }}</span>
+                    </div>
+                </div>
+
+                <a href="/" class="submit-btn" style="display: inline-block; text-decoration: none; text-align: center;">Analyze Again</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
