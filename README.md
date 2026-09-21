@@ -71,6 +71,8 @@ Depending on your habits, the model will classify you into one of three distinct
 - **Music Explorer:** Active curator with a balanced and healthy relationship with music discovery.
 - **Heavy Listener:** Deeply immersed in audio, with a constant stream of music shaping their day.
 
-TEAM 2
+
 ---
 *Developed for advanced behavioral clustering and seamless UX integration.*
+
+Done By Team 2
